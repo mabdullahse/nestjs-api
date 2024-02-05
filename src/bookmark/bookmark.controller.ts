@@ -11,10 +11,10 @@ import {
   Post,
   UseGuards,
 } from '@nestjs/common';
-import { JwtAuthGuard } from '../../src/auth/guard/jwt-auth.guard';
+import { JwtAuthGuard } from '../auth/guard/jwt-auth.guard';
 import { BookmarkService } from './bookmark.service';
 import { CreateBookmarkDto, EditBookmarkDto } from './dto';
-import { GetUser } from '../../src/auth/decorator';
+import { GetUser } from '../auth/decorator';
 
 @UseGuards(JwtAuthGuard)
 @Controller('bookmarks')
